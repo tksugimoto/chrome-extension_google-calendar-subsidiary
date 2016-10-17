@@ -1,15 +1,15 @@
 {
-    "name": "Googleカレンダー補助",
-    "version": "0.1.0",
-    "manifest_version": 2,
-    "description": "",
-    "content_scripts": [{
-        "matches": [
-            "https://calendar.google.com/*"
-        ],
-        "js": [
-            // 日付選択の小さいカレンダー上のホイールで月移動
-            "move-month-by-wheel.js"
-        ]
-    }]
+	"name": "Googleカレンダー補助",
+	"version": "0.1.0",
+	"manifest_version": 2,
+	"description": "",
+	"content_scripts": [{
+		"matches": [
+			"https://calendar.google.com/*"
+		],
+		"js": [
+			// 日付選択の小さいカレンダー上のホイールで月移動
+			"move-month-by-wheel.js"
+		]
+	}]
 }
