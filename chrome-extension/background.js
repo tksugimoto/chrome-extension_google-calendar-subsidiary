@@ -4,7 +4,7 @@ const createContextMenus = () => {
 	chrome.contextMenus.create({
 		title: "Googleカレンダーを開く",
 		contexts: ["browser_action"],
-		id: "open-google-calendar"
+		id: "open_google_calendar"
 	});
 };
 
@@ -12,7 +12,7 @@ chrome.runtime.onInstalled.addListener(createContextMenus);
 chrome.runtime.onStartup.addListener(createContextMenus);
 
 const functions = {
-	"open-google-calendar": () => {
+	"open_google_calendar": () => {
 		chrome.windows.create({
 			url: "https://calendar.google.com/",
 			type: "popup",
