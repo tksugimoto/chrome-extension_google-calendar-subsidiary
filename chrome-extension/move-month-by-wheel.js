@@ -13,5 +13,6 @@ document.body.addEventListener("wheel", evt => {
 	evt.preventDefault();
 	
 	const targetSelector = `.dp-${deltaY > 0 ? "next" : "prev"}`;
-	elem.querySelector(targetSelector).dispatchEvent(new Event("mousedown"));
+	const mousedownEvent = new Event("mousedown");
+	elem.querySelector(targetSelector).dispatchEvent(mousedownEvent);
 });
