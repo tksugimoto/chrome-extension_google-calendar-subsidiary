@@ -11,4 +11,6 @@ document.body.addEventListener('wheel', evt => {
 
 	const targetSelector = `[aria-label="${deltaY > 0 ? '翌月' : '前月'}"]`;
 	elem.querySelector(targetSelector).click();
+}, {
+	passive: false,
 });
