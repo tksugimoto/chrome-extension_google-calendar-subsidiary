@@ -1,5 +1,3 @@
-"use strict";
-
 const createContextMenus = () => {
 	chrome.contextMenus.create({
 		title: "Googleカレンダーを開く",
