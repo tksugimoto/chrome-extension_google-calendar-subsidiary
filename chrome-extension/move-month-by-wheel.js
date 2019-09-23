@@ -4,15 +4,12 @@ document.body.addEventListener("wheel", evt => {
 	if (deltaY === 0) return;
 
 	const elem = evt.path.find(e => {
-		return e.classList && 
-				e.classList.contains("monthtableSpace") && 
-				e.closest(".dpi-popup");
+		return e.id === 'drawerMiniMonthNavigator';
 	});
 	if (!elem) return;
 
 	evt.preventDefault();
 	
-	const targetSelector = `.dp-${deltaY > 0 ? "next" : "prev"}`;
-	const mousedownEvent = new Event("mousedown");
-	elem.querySelector(targetSelector).dispatchEvent(mousedownEvent);
+	const targetSelector = `[aria-label="${deltaY > 0 ? "翌月" : "前月"}"]`;
+	elem.querySelector(targetSelector).click();
 });
