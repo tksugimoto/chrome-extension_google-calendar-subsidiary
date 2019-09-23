@@ -1,5 +1,4 @@
-"use strict";
-document.body.addEventListener("wheel", evt => {
+document.body.addEventListener('wheel', evt => {
 	const deltaY = evt.deltaY;
 	if (deltaY === 0) return;
 
@@ -9,7 +8,7 @@ document.body.addEventListener("wheel", evt => {
 	if (!elem) return;
 
 	evt.preventDefault();
-	
-	const targetSelector = `[aria-label="${deltaY > 0 ? "翌月" : "前月"}"]`;
+
+	const targetSelector = `[aria-label="${deltaY > 0 ? '翌月' : '前月'}"]`;
 	elem.querySelector(targetSelector).click();
 });
